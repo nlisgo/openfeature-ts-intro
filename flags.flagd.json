@@ -1,12 +1,20 @@
 {
   "flags": {
-    "welcome-message": {
+    "show-welcome-message": {
       "variants": {
         "on": true,
         "off": false
       },
       "state": "ENABLED",
       "defaultVariant": "off"
+    },
+    "welcome-message": {
+      "variants": {
+        "default": "Default set by flagd",
+        "custom": "Custom set by flagd"
+      },
+      "state": "ENABLED",
+      "defaultVariant": "default"
     }
   }
 }

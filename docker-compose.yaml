@@ -10,13 +10,16 @@ services:
       retries: 3
       start_period: 5s
     ports:
-      - 3000:3000
+      - 5000:3000
     depends_on:
       - flagd
     volumes:
       - .:/app
     environment:
       - FLAGD_HOST=flagd
+      - OPENFEATURE_PROVIDER=${OPENFEATURE_PROVIDER:-flagd}
+      - SHOW_WELCOME_MESSAGE=${SHOW_WELCOME_MESSAGE:-false}
+      - WELCOME_MESSAGE=${WELCOME_MESSAGE:-Hello World set by Environment!}
 
   flagd:
     image: ghcr.io/open-feature/flagd:v0.11.4
