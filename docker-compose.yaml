@@ -1,0 +1,22 @@
+services:
+  app:
+    build:
+      context: .
+      target: dev
+    ports:
+      - 3000:3000
+    depends_on:
+      - flagd
+    volumes:
+      - .:/app
+    environment:
+      - FLAGD_HOST=flagd
+
+  flagd:
+    image: ghcr.io/open-feature/flagd:v0.11.4
+    command: start --uri file:/etc/flagd/flags.flagd.json
+    volumes:
+      - ./flags.flagd.json:/etc/flagd/flags.flagd.json
+    ports:
+      - 8013:8013
+      - 8016:8016
