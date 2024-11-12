@@ -82,6 +82,13 @@
     lru-cache "10.2.2"
     util "0.12.5"
 
+"@openfeature/multi-provider@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@openfeature/multi-provider/-/multi-provider-0.1.1.tgz#9244a33592c4c6649b8bf3624e0d9f25d0cf9c7d"
+  integrity sha512-yrFYIKkoBK9DHmU80HFTXMxZx5QkIvW5uC5ePHf1Rvbh4GgnATnaAYmTkjUTs9kfmW2STEtnxQVYwTD09K5tAg==
+  dependencies:
+    tslib "^2.3.0"
+
 "@openfeature/server-sdk@^1.16.2":
   version "1.16.2"
   resolved "https://registry.yarnpkg.com/@openfeature/server-sdk/-/server-sdk-1.16.2.tgz#37fd94e6e9f8c4289f5ac2d42db800e466a93594"

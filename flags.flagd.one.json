@@ -1,0 +1,28 @@
+{
+  "$schema": "https://flagd.dev/schema/v0/flags.json",
+  "flags": {
+    "show-welcome-message": {
+      "variants": {
+        "on": true,
+        "off": false
+      },
+      "state": "DISABLED",
+      "defaultVariant": "on"
+    },
+    "welcome-message": {
+      "variants": {
+        "default": "Default set by flagd-one",
+        "custom": "Custom set by flagd-one"
+      },
+      "state": "ENABLED",
+      "defaultVariant": "default"
+    },
+    "more-fun": {
+      "variants": {
+        "default": "more-fun set by flagd-one"
+      },
+      "state": "DISABLED",
+      "defaultVariant": "default"
+    }
+  }
+}

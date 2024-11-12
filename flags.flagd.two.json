@@ -1,0 +1,13 @@
+{
+  "$schema": "https://flagd.dev/schema/v0/flags.json",
+  "flags": {
+    "welcome-message": {
+      "variants": {
+        "default": "Default set by flagd-two",
+        "custom": "Custom set by flagd-two"
+      },
+      "state": "ENABLED",
+      "defaultVariant": "default"
+    }
+  }
+}
