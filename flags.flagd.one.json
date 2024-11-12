@@ -23,6 +23,16 @@
       },
       "state": "DISABLED",
       "defaultVariant": "default"
+    },
+    "config": {
+      "variants": {
+        "default": {
+          "showWelcomeMessage": true,
+          "welcomeMessage": "Hello!!"
+        }
+      },
+      "state": "ENABLED",
+      "defaultVariant": "default"
     }
   }
 }
