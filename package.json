@@ -11,7 +11,8 @@
     "@openfeature/multi-provider": "^0.1.1",
     "@openfeature/server-sdk": "^1.16.2",
     "express": "^4.21.1",
-    "joi": "^17.13.3"
+    "joi": "^17.13.3",
+    "ts-deepmerge": "^7.0.1"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",

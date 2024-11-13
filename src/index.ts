@@ -4,6 +4,7 @@ import { EnvVarProvider } from '@openfeature/env-var-provider';
 import { FlagdProvider } from '@openfeature/flagd-provider';
 import { FirstSuccessfulStrategy, MultiProvider } from '@openfeature/multi-provider';
 import Joi from 'joi';
+import { merge } from 'ts-deepmerge';
 
 type Config = {
   showWelcomeMessage: boolean,
@@ -63,13 +64,18 @@ switch (process.env.OPENFEATURE_PROVIDER) {
 
 const client = OpenFeature.getClient();
 
-const getConfig = async () => Joi.attempt(
-  await client.getObjectValue('config', defaultConfig),
-  ConfigSchema,
-  {
-    allowUnknown: true,
-  }
-);
+const getConfig = async () => {
+  const config = await client.getObjectValue('config', {});
+  const mergedConfig = (config && typeof config === 'object') ? merge(defaultConfig, config) : defaultConfig;
+  
+  return Joi.attempt(
+    mergedConfig,
+    ConfigSchema,
+    {
+      allowUnknown: true,
+    }
+  );
+}
 
 app.get('/', async (_, res) => {
   const showWelcomeMessage = await client.getBooleanValue('show-welcome-message', false);
