@@ -9,6 +9,13 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
+"@growthbook/growthbook@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@growthbook/growthbook/-/growthbook-1.2.1.tgz#efc236afec8aa061d306d72ab1c9fa67697e513e"
+  integrity sha512-V0of0mGXZ69poOTPoZ8TFkJkPpC9T766NZiJ1qwzwFAl8ZsuunmguC6RP4muri4q5DRPDzf3lRUSWLk0g8bdbw==
+  dependencies:
+    dom-mutator "^0.6.0"
+
 "@grpc/grpc-js@^1.12.2":
   version "1.12.2"
   resolved "https://registry.yarnpkg.com/@grpc/grpc-js/-/grpc-js-1.12.2.tgz#97eda82dd49bb9c24eaf6434ea8d7de446e95aac"
@@ -94,6 +101,14 @@
     lru-cache "10.2.2"
     util "0.12.5"
 
+"@openfeature/growthbook-client-provider@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@openfeature/growthbook-client-provider/-/growthbook-client-provider-0.1.2.tgz#d33ca1604e3d6b6eb5ecb2d51a00d485cfdf5474"
+  integrity sha512-YIpvi29lU6aryf5matvpHSv0K7ls8NGEEzgZULZ2jYTttoCsfIvzGotARCZza+XpPXez+kMn9I5IvHEcUTffdA==
+  dependencies:
+    lodash.isempty "4.4.0"
+    tslib "^2.3.0"
+
 "@openfeature/multi-provider@^0.1.1":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@openfeature/multi-provider/-/multi-provider-0.1.1.tgz#9244a33592c4c6649b8bf3624e0d9f25d0cf9c7d"
@@ -105,6 +120,11 @@
   version "1.16.2"
   resolved "https://registry.yarnpkg.com/@openfeature/server-sdk/-/server-sdk-1.16.2.tgz#37fd94e6e9f8c4289f5ac2d42db800e466a93594"
   integrity sha512-bGK3Lgf9JY06s1vJkBs1PgSH+taxrwBx/SJFTNWAmA5TfV3c5SgLCGlU2xYEda5Ba3885ly+foWeRJrXdZGQ+g==
+
+"@openfeature/web-sdk@^1.3.2":
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/@openfeature/web-sdk/-/web-sdk-1.3.2.tgz#c7f5b5b2adc08d1168022d3975f3f5ec771706ab"
+  integrity sha512-DY7JwA4Pakczq/s6em8hsLuCL8xYfKeyzb9F18gM3Eh0OStUxrUsKfDKuAk1h9l810W1hoA1AVmvPSsQDHItxw==
 
 "@protobuf-ts/runtime-rpc@2.9.4":
   version "2.9.4"
@@ -519,6 +539,11 @@ diff@^4.0.1:
   resolved "https://registry.yarnpkg.com/diff/-/diff-4.0.2.tgz#60f3aecb89d5fae520c11aa19efc2bb982aade7d"
   integrity sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==
 
+dom-mutator@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/dom-mutator/-/dom-mutator-0.6.0.tgz#079d7a4b3e8981a562cd777548b99baab51d65c5"
+  integrity sha512-iCt9o0aYfXMUkz/43ZOAUFQYotjGB+GNbYJiJdz4TgXkyToXbbRy5S6FbTp72lRBtfpUMwEc1KmpFEU4CZeoNg==
+
 ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
@@ -845,6 +870,11 @@ lodash.camelcase@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
   integrity sha512-TwuEnCnxbc3rAvhf/LbG7tJUDzhqXyFnv3dtzLOPgCG/hODL7WFnsbwktkD7yUV0RrreP/l1PALq/YSg6VvjlA==
+
+lodash.isempty@4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/lodash.isempty/-/lodash.isempty-4.4.0.tgz#6f86cbedd8be4ec987be9aaf33c9684db1b31e7e"
+  integrity sha512-oKMuF3xEeqDltrGMfDxAPGIVMSSRv8tbRSODbrs4KGsRRLEhrW8N8Rd4DRgB2+621hY8A8XwwrTVhXWpxFvMzg==
 
 long@^5.0.0:
   version "5.2.3"
