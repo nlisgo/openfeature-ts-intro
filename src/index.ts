@@ -65,30 +65,32 @@ switch (process.env.OPENFEATURE_PROVIDER) {
 const client = OpenFeature.getClient();
 
 const getConfig = async () => {
-  const config = await client.getObjectValue('config', {});
-  const mergedConfig = (config && typeof config === 'object') ? merge(defaultConfig, config) : defaultConfig;
-  
-  return Joi.attempt(
-    mergedConfig,
-    ConfigSchema,
-    {
-      allowUnknown: true,
-    }
-  );
+  try {
+    const config = await client.getObjectValue('config', {});
+    const mergedConfig = (config && typeof config === 'object') ? merge(defaultConfig, config) : defaultConfig;
+    
+    return Joi.attempt(
+      mergedConfig,
+      ConfigSchema,
+      {
+        allowUnknown: true,
+      }
+    );
+  } catch (error) {
+    console.warn(error);
+    return defaultConfig;
+  }
 }
 
 app.get('/', async (_, res) => {
   const showWelcomeMessage = await client.getBooleanValue('show-welcome-message', false);
   const welcomeMessage = await client.getStringValue('welcome-message', 'Default welcome message');
   const moreFun = await client.getStringValue('more-fun', 'No more-fun!!');
-  const config = await getConfig().catch((error) => {
-    console.warn(error);
-    return defaultConfig;
-  });
+  const config = await getConfig();
   console.log(config);
-  res.send(`
-    Express + TypeScript${showWelcomeMessage ? ' + OpenFeature Server' : ''}: ${welcomeMessage}${!!moreFun ? ` (${moreFun})` : ''}
-    ${JSON.stringify(config)}
+  res.setHeader('Content-Type', 'text/html').send(`
+    <p>Express + TypeScript${showWelcomeMessage ? ' + OpenFeature Server' : ''}: ${welcomeMessage}${!!moreFun ? ` (${moreFun})` : ''}</p>
+    <p>${JSON.stringify(config)}</p>
   `);
 });
 
